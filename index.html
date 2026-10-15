@@ -1,0 +1,37 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes System Design Client</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>QuickNotes Production Client</h1>
+        
+        <div class="control-panel">
+            <button id="load-btn">Load Notes</button>
+            <p id="status"></p>
+        </div>
+
+        <form id="note-form">
+            <h2>Create New Note</h2>
+            <div class="form-group">
+                <label for="title-input">Note Title (Required):</label>
+                <input type="text" id="title-input" placeholder="Enter note title..." required>
+            </div>
+            <div class="form-group">
+                <label for="body-input">Note Body (Optional):</label>
+                <textarea id="body-input" rows="4" placeholder="Enter note body content..."></textarea>
+            </div>
+            <button type="submit" id="submit-btn">Create Note</button>
+        </form>
+
+        <h2>Your Notes Collection</h2>
+        <ul id="notes-list"></ul>
+    </main>
+</body>
+</html>
